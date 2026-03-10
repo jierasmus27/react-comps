@@ -13,11 +13,14 @@ function Accordion({ items }) {
 
     const handleClick = (index) => {
       if (expandedIndex === index) {
-        setExpandedIndex(null);
-        return;
+        setExpandedIndex(current => {
+          if (current === index) {
+            return null;
+          } else {
+            return index;
+          }
+        });
       }
-
-      setExpandedIndex(index);
     };
 
     return <div key={item.id}>

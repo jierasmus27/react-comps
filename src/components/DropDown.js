@@ -19,13 +19,8 @@ function DropDown({ options, selection, onChange }) {
 
   console.log(dropDownOptions);
 
-  let content = "Select.."
-  if (selection) {
-    content = selection.label;
-  }
-
   return <div>
-    <div onClick={handleOpenClick}>{content}</div>
+    <div onClick={handleOpenClick}>{selection?.label || 'Select...'}</div>
     {menuOpen && <div>{dropDownOptions}</div>}
   </div>;
 }

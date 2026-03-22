@@ -12,7 +12,7 @@ function DropDown({ options, value, onChange }) {
         return;
       }
 
-      if (!divElement.current.contains(event.target) && menuOpen) {
+      if (!divElement.current.contains(event.target)) {
         setMenuOpen(false);
       }
     };
@@ -22,7 +22,7 @@ function DropDown({ options, value, onChange }) {
     return () => {
       document.removeEventListener('click', handler);
     };
-  }, [menuOpen]);
+  }, []);
 
   const handleOptionClick = (option) => {
     setMenuOpen((currentMenuOpen) => !currentMenuOpen);

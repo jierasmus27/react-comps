@@ -5,7 +5,6 @@ function DropDown({ options, selection, onChange }) {
 
   const handleOptionClick = (option) => {
     setMenuOpen((currentMenuOpen) => !currentMenuOpen);
-    console.log(option)
     onChange(option);
   };
 

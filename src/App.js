@@ -5,7 +5,6 @@ function App() {
   const [selection, setSelection] = useState(null);
 
   const handleSelect = (option) => {
-    console.log('handleSelect', option)
     setSelection(option);
   };
 
@@ -15,7 +14,7 @@ function App() {
     { label: 'Blue', value: 'blue' }
   ];
 
-  return <DropDown options={options} onChange={handleSelect} selection={selection} />
+  return <DropDown options={options} onChange={handleSelect} value={selection} />
 }
 
 export default App;

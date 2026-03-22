@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function DropDown({ options, selection, onChange }) {
+function DropDown({ options, value, onChange }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleOptionClick = (option) => {
@@ -19,7 +19,7 @@ function DropDown({ options, selection, onChange }) {
   console.log(dropDownOptions);
 
   return <div>
-    <div onClick={handleOpenClick}>{selection?.label || 'Select...'}</div>
+    <div onClick={handleOpenClick}>{value?.label || 'Select...'}</div>
     {menuOpen && <div>{dropDownOptions}</div>}
   </div>;
 }

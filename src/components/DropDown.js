@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { GoChevronDown, GoChevronLeft } from 'react-icons/go';
 
 function DropDown({ options, value, onChange }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,6 +23,9 @@ function DropDown({ options, value, onChange }) {
      onClick={handleOpenClick}
      >
       {value?.label || 'Select...'}
+      <span className="text-lg">
+        {menuOpen ? <GoChevronDown /> : <GoChevronLeft />}
+      </span>
     </div>
     {menuOpen && <div className="absolute top-full border rounded p-3 shadow bg-white w-full">{dropDownOptions}</div>}
   </div>;

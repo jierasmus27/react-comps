@@ -8,7 +8,6 @@ function ButtonPage() {
         <GoCloudDownload />
         Click me
       </Button>
-
     </div>
     <div>
       <Button warning>

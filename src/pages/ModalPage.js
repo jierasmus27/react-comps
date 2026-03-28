@@ -9,8 +9,6 @@ function ModalPage() {
     setShowModal(true);
   };
 
-  console.log('showModal', showModal);
-
   return (
     <div>
       <Button primary onClick={handleClick}>Open Modal</Button>

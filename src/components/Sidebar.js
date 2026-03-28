@@ -5,6 +5,7 @@ function Sidebar() {
     { label: 'Dropdown', path: '/' },
     { label: 'Accordion', path: '/accordion' },
     { label: 'Button', path: '/buttons' },
+    { label: 'Modal', path: '/modal' },
   ];
 
   return <div className="sticky top-0 overflow-y-scroll flex flex-col items-start">
